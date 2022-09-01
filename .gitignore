@@ -1,0 +1,17 @@
+*.md
+Formation/Azure/*
+Formation/CRTO/*
+Serveur/Iptables/*
+Serveur/OpenVPN/*
+Serveur/PKI/*
+Serveur/Postfix/*
+Serveur/Raspberry/*
+Serveur/Seafile/*
+AD/*
+Autre/*
+Docker/*
+CTF/*
+Dev/*
+.gitlab-ci.yml
+*.py
+*.ps1
