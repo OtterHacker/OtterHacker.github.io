@@ -11,12 +11,11 @@ require(['gitbook', 'jQuery'], function(gitbook, $) {
       .children('a,span')
       .append(
         $(TRIGGER_TEMPLATE)
-          .on('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            toggle($(e.target).closest(CHAPTER));
-          })
       );
+    $(ARTICLES).parent(CHAPTER).on('click', function(e) {
+      e.stopPropagation();
+      toggle($(e.target).closest(CHAPTER));
+    });
     expand(lsItem());
     //expand current selected chapter with it's parents
     var activeChapter = $(CHAPTER + '.active');
