@@ -68,6 +68,8 @@
     <link rel="next" href="../LicenceKey.html" />
     
     
+    <link rel="prev" href="../Proxmox/Intel Killer AX1650.html" />
+    
 
     </head>
     <body>
@@ -977,7 +979,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4.15" data-path="../../Pentest/Techniques/Shellshock.html">
+        <li class="chapter " data-level="1.5.4.15" data-path="../../Pentest/Techniques/Scrapping.md">
+            
+                <span>
+            
+                    
+                    Scrapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.16" data-path="../../Pentest/Techniques/Shellshock.html">
             
                 <a href="../../Pentest/Techniques/Shellshock.html">
             
@@ -990,7 +1005,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4.16" data-path="../../Pentest/Techniques/SQL injection.html">
+        <li class="chapter " data-level="1.5.4.17" data-path="../../Pentest/Techniques/SQL injection.html">
             
                 <a href="../../Pentest/Techniques/SQL injection.html">
             
@@ -1003,7 +1018,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4.17" data-path="../../Pentest/Techniques/SSTI.html">
+        <li class="chapter " data-level="1.5.4.18" data-path="../../Pentest/Techniques/SSTI.html">
             
                 <a href="../../Pentest/Techniques/SSTI.html">
             
@@ -1312,7 +1327,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="KMS.html">
+        <li class="chapter " data-level="1.6.1" data-path="../Proxmox/Intel Killer AX1650.html">
+            
+                <a href="../Proxmox/Intel Killer AX1650.html">
+            
+                    
+                    Killer AX1650
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="KMS.html">
             
                 <a href="KMS.html">
             
@@ -1325,7 +1353,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../LicenceKey.html">
+        <li class="chapter " data-level="1.6.3" data-path="../LicenceKey.html">
             
                 <a href="../LicenceKey.html">
             
@@ -1396,12 +1424,25 @@
 <!-- toc -->
 <ul>
 <li><a href="#kms">KMS</a></li>
+<li><a href="#upgrade-windows-evaluation">Upgrade Windows evaluation</a></li>
+<li><a href="#activate-windows">Activate Windows</a></li>
 <li><a href="#activate-office">Activate Office</a></li>
 <li><a href="#licence-not-installed">Licence not installed</a></li>
 </ul>
 <!-- tocstop -->
 <h1 id="kms">KMS</h1>
 <p>Use the python KMS emulator</p>
+<h1 id="upgrade-windows-evaluation">Upgrade Windows evaluation</h1>
+<pre><code class="lang-bat">DISM /online /<span class="hljs-built_in">Set</span>-Edition:ServerStandard /ProductKey:${productKey} /AcceptEula
+</code></pre>
+<pre><code>2016: CB7KF-BWN84-R7R2Y-793K2-8XDDG
+2019: N69G4-B89J2-4G8F4-WWYCC-J464C
+2022: VDYBN-27WPP-V4HQT-9VMD4-VMK7H
+</code></pre><h1 id="activate-windows">Activate Windows</h1>
+<pre><code class="lang-bat">slmgr.vbs /skms ${ip}:<span class="hljs-number">1688</span>
+slmgr.vbs /ipk ${licenseKey}
+slmgr.vbs /ato
+</code></pre>
 <h1 id="activate-office">Activate Office</h1>
 <pre><code class="lang-bat">cscript &quot;C:\Program Files\Microsoft Office\Office16\ospp.vbs&quot; /inpkey:XQNVK-<span class="hljs-number">8</span>JYDB-WJ9W3-YJ8YR-WFG99
 cscript &quot;C:\Program Files\Microsoft Office\Office16\ospp.vbs&quot; /unpkey:BTDRB &gt;<span class="hljs-built_in">nul</span>
@@ -1457,8 +1498,12 @@ cscript &quot;C:\Program Files\Microsoft Office\Office16\ospp.vbs&quot; /act
 
             
                 
+                <a href="../Proxmox/Intel Killer AX1650.html" class="navigation navigation-prev " aria-label="Previous page: Killer AX1650">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="../LicenceKey.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Licence Key">
+                
+                <a href="../LicenceKey.html" class="navigation navigation-next " aria-label="Next page: Licence Key">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1469,7 +1514,7 @@ cscript &quot;C:\Program Files\Microsoft Office\Office16\ospp.vbs&quot; /act
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"KMS Activation","level":"1.6.1","depth":2,"next":{"title":"Licence Key","level":"1.6.2","depth":2,"path":"Serveur/LicenceKey.md","ref":"Serveur/LicenceKey.md","articles":[]},"previous":{"title":"Rainy Sunday","level":"1.6","depth":1,"ref":"","articles":[{"title":"KMS Activation","level":"1.6.1","depth":2,"path":"Serveur/KMS/KMS.md","ref":"Serveur/KMS/KMS.md","articles":[]},{"title":"Licence Key","level":"1.6.2","depth":2,"path":"Serveur/LicenceKey.md","ref":"Serveur/LicenceKey.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","collapsible-chapters@git+https://gitlab.dqr/gitbook-plugin/collapsible-chapters.git#main","copy-code-button@git+https://gitlab.dqr/gitbook-plugin/copy-code-button.git#main","hide-published-with","search-plus","simple-page-toc"],"pluginsConfig":{"github":{"url":"https://github.com/YoannDqr"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"twitter":{"url":"https://twitter.com/HackerOtter"},"highlight":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Serveur/KMS/KMS.md","mtime":"2023-05-14T19:07:17.504Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-14T19:15:52.705Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"KMS Activation","level":"1.6.2","depth":2,"next":{"title":"Licence Key","level":"1.6.3","depth":2,"path":"Serveur/LicenceKey.md","ref":"Serveur/LicenceKey.md","articles":[]},"previous":{"title":"Killer AX1650","level":"1.6.1","depth":2,"path":"Serveur/Proxmox/Intel Killer AX1650.md","ref":"Serveur/Proxmox/Intel Killer AX1650.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","collapsible-chapters@git+https://gitlab.dqr/gitbook-plugin/collapsible-chapters.git#main","copy-code-button@git+https://gitlab.dqr/gitbook-plugin/copy-code-button.git#main","hide-published-with","search-plus","simple-page-toc"],"pluginsConfig":{"github":{"url":"https://github.com/YoannDqr"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"twitter":{"url":"https://twitter.com/HackerOtter"},"highlight":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Serveur/KMS/KMS.md","mtime":"2023-05-15T21:21:11.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-15T21:21:38.827Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
